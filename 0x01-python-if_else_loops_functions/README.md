@@ -7,3 +7,4 @@
 6. Inventing is a combination of brains and materials. The more brains you use, the less material you need: This task prints all possible different combinations of two digits in ascending order. Digits must be unique and combinations are not repeated.
 7. islower: A function that checks if a character is in lowercase. It uses the ord() function to determine this without importing any module or using str.upper() and str.isupper().
 8. To uppercase: A function that prints a string in uppercase followed by a new line. It uses the ord() and chr() functions to achieve this without importing any module or using str.upper() and str.isupper().
+9. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important: A function that prints the last digit of a number. The function also returns the last digit.
