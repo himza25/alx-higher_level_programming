@@ -3,3 +3,4 @@
 2. I sometimes suffer from insomnia: This task is about printing the lowercase alphabet without a newline using a single loop and print statement.
 3. When I was having that alphabet soup: This task prints the lowercase alphabet without the letters 'e' and 'q' using a single loop and print statement.
 4. Hexadecimal printing: This task prints numbers from 0 to 98 in both decimal and hexadecimal format using a single loop and print statement.
+5. 00...99: This task prints numbers from 0 to 99, each separated by a comma and space. Each number is printed with two digits, and the sequence ends with a newline.
