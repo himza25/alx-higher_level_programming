@@ -4,3 +4,4 @@ Task 2: This task involves creating a Python script that prints a specific sente
 Task 3: This task involves creating a Python script that prints a specific integer followed by a text string using f-strings.
 Task 4: This task involves creating a Python script that prints a float with a precision of 2 digits using f-strings.
 Task 5: This task involves creating a Python script that prints a string 3 times followed by its first 9 characters.
+Task 6: This task is about concatenating two strings without using loops or conditional statements.
