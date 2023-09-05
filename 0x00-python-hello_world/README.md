@@ -11,3 +11,4 @@ Task 9: This task is about printing 'The Zen of Python' by Tim Peters using a Py
 Task 10: This task is about checking if a singly linked list has a cycle using the Tortoise and the Hare approach.
 Task 11: Hello, write - A Python script that prints a specific message to stderr and exits with status code 1.
 Task 12: Compile - A shell script that compiles a Python script file using an environment variable.
+Task 13: ByteCode -> Python #1: Recreating a Python function from its bytecode.
