@@ -10,3 +10,4 @@
 9. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important: A function that prints the last digit of a number. The function also returns the last digit.
 10. a + b: A function that adds two integers and returns the result.
 11. a ^ b: A function that computes a to the power of b and return the value.
+12. Fizz Buzz: A function that prints the numbers from 1 to 100 with the FizzBuzz rules.
