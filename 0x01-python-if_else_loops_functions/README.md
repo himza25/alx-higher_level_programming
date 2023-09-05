@@ -4,3 +4,4 @@
 3. When I was having that alphabet soup: This task prints the lowercase alphabet without the letters 'e' and 'q' using a single loop and print statement.
 4. Hexadecimal printing: This task prints numbers from 0 to 98 in both decimal and hexadecimal format using a single loop and print statement.
 5. 00...99: This task prints numbers from 0 to 99, each separated by a comma and space. Each number is printed with two digits, and the sequence ends with a newline.
+6. Inventing is a combination of brains and materials. The more brains you use, the less material you need: This task prints all possible different combinations of two digits in ascending order. Digits must be unique and combinations are not repeated.
