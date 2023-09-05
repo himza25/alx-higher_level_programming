@@ -6,3 +6,4 @@
 5. 00...99: This task prints numbers from 0 to 99, each separated by a comma and space. Each number is printed with two digits, and the sequence ends with a newline.
 6. Inventing is a combination of brains and materials. The more brains you use, the less material you need: This task prints all possible different combinations of two digits in ascending order. Digits must be unique and combinations are not repeated.
 7. islower: A function that checks if a character is in lowercase. It uses the ord() function to determine this without importing any module or using str.upper() and str.isupper().
+8. To uppercase: A function that prints a string in uppercase followed by a new line. It uses the ord() and chr() functions to achieve this without importing any module or using str.upper() and str.isupper().
