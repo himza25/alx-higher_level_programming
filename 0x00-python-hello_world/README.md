@@ -5,3 +5,4 @@ Task 3: This task involves creating a Python script that prints a specific integ
 Task 4: This task involves creating a Python script that prints a float with a precision of 2 digits using f-strings.
 Task 5: This task involves creating a Python script that prints a string 3 times followed by its first 9 characters.
 Task 6: This task is about concatenating two strings without using loops or conditional statements.
+Task 7: This task is about manipulating string indices to obtain the first three letters, the last two letters, and the middle part of the string.
