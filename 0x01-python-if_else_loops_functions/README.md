@@ -9,3 +9,4 @@
 8. To uppercase: A function that prints a string in uppercase followed by a new line. It uses the ord() and chr() functions to achieve this without importing any module or using str.upper() and str.isupper().
 9. There are only 3 colors, 10 digits, and 7 notes; it's what we do with them that's important: A function that prints the last digit of a number. The function also returns the last digit.
 10. a + b: A function that adds two integers and returns the result.
+11. a ^ b: A function that computes a to the power of b and return the value.
