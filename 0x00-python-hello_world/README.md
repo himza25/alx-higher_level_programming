@@ -3,3 +3,4 @@ Task 1: This task involves creating a shell script to run Python code saved in a
 Task 2: This task involves creating a Python script that prints a specific sentence.
 Task 3: This task involves creating a Python script that prints a specific integer followed by a text string using f-strings.
 Task 4: This task involves creating a Python script that prints a float with a precision of 2 digits using f-strings.
+Task 5: This task involves creating a Python script that prints a string 3 times followed by its first 9 characters.
