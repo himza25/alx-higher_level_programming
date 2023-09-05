@@ -10,3 +10,4 @@ Task 8: This task is about slicing a given string to create a new sentence witho
 Task 9: This task is about printing 'The Zen of Python' by Tim Peters using a Python easter egg command.
 Task 10: This task is about checking if a singly linked list has a cycle using the Tortoise and the Hare approach.
 Task 11: Hello, write - A Python script that prints a specific message to stderr and exits with status code 1.
+Task 12: Compile - A shell script that compiles a Python script file using an environment variable.
