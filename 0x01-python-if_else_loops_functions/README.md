@@ -1,1 +1,1 @@
-Task 13 : This project is about inserting a node into a sorted singly linked list in C.
+Task 14 : This project contains a script that prints the ASCII alphabet in reverse order, alternating lowercase and uppercase.
