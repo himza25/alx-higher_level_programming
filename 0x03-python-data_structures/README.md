@@ -10,3 +10,4 @@ Task 8 : This task is about creating a Python function that returns a tuple with
 Task 9 : This task is about creating a Python function that finds the biggest integer of a list
 Task 10 : This task is about creating a Python function that finds all multiples of 2 in a list
 Task 11 : This task is about creating a Python function that deletes the item at a specific position in a list
+Task 12 : This task is about completing the source code in order to switch the values of a and b
