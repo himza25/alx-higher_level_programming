@@ -7,3 +7,4 @@ Task 5 : This script includes a Python function that removes all characters 'c' 
 Task 6 : This script includes a Python function that prints a matrix of integers.
 Task 7 : This task is about creating a Python function that adds 2 tuples
 Task 8 : This task is about creating a Python function that returns a tuple with the length of a string and its first character
+Task 9 : This task is about creating a Python function that finds the biggest integer of a list
