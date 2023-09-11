@@ -9,3 +9,4 @@ Task 7 : This task is about creating a Python function that adds 2 tuples
 Task 8 : This task is about creating a Python function that returns a tuple with the length of a string and its first character
 Task 9 : This task is about creating a Python function that finds the biggest integer of a list
 Task 10 : This task is about creating a Python function that finds all multiples of 2 in a list
+Task 11 : This task is about creating a Python function that deletes the item at a specific position in a list
