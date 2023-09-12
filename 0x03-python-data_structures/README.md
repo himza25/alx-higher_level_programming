@@ -11,4 +11,5 @@ Task 9 : This task is about creating a Python function that finds the biggest in
 Task 10 : This task is about creating a Python function that finds all multiples of 2 in a list
 Task 11 : This task is about creating a Python function that deletes the item at a specific position in a list
 Task 12 : This task is about completing the source code in order to switch the values of a and b
+Task 13 : Contains the `is_palindrome` function which checks if a given singly linked list is a palindrome.
 Task 14 : This task involves creating a C function that prints basic info about Python lists. The function, , takes a PyObject list as an argument and prints its size, the amount of space allocated, and the type of each element in the list.
