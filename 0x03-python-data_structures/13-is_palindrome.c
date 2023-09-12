@@ -2,45 +2,30 @@
 #include <stdlib.h>
 
 /**
- * is_palindrome - checks if a singly linked list is a palindrome
- * @head: pointer to pointer of first node of listint_t list
- * Return: 0 if it is not a palindrome, 1 if it is a palindrome
+ * is_palindrome - checks if a singly linked list is a palindrome.
+ * @head: pointer to the head of the linked list.
+ * Return: 0 if it is not a palindrome, 1 if it is a palindrome.
  */
 int is_palindrome(listint_t **head)
 {
 	listint_t *temp = *head;
-	int len = 0, i;
-	int *array;
+	int array[2048];
+	int i = 0, j;
 
-	if (*head == NULL || (*head)->next == NULL)
+	if (!*head)
 		return (1);
 
-	while (temp != NULL)
+	while (temp)
 	{
-		len++;
+		array[i++] = temp->n;
 		temp = temp->next;
 	}
 
-	array = malloc(sizeof(int) * len);
-	if (array == NULL)
-		return (0);
-
-	temp = *head;
-	for (i = 0; i < len; i++)
+	for (j = 0; j < i / 2; j++)
 	{
-		array[i] = temp->n;
-		temp = temp->next;
-	}
-
-	for (i = 0; i < len / 2; i++)
-	{
-		if (array[i] != array[len - i - 1])
-		{
-			free(array);
+		if (array[j] != array[i - 1 - j])
 			return (0);
-		}
 	}
 
-	free(array);
 	return (1);
 }
