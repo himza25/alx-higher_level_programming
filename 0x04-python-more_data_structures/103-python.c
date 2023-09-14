@@ -5,9 +5,9 @@
 
 void print_python_bytes(PyObject *p)
 {
-	long int taille;  // changed from size
-	int indice;  // changed from i
-	char *chaine_essai = NULL;  // changed from trying_str
+	long int size;
+	int i;
+	char *trying_str = NULL;
 
 	printf("[.] bytes object info\n");
 	if (!PyBytes_Check(p))
@@ -16,34 +16,34 @@ void print_python_bytes(PyObject *p)
 		return;
 	}
 
-	PyBytes_AsStringAndSize(p, &chaine_essai, &taille);
+	PyBytes_AsStringAndSize(p, &trying_str, &size);
 
-	printf("  taille: %li\n", taille);
-	printf("  chaine d'essai: %s\n", chaine_essai);
-	if (taille < 10)
-		printf("  premiers %li octets:", taille + 1);
+	printf("  size: %li\n", size);
+	printf("  trying string: %s\n", trying_str);
+	if (size < 10)
+		printf("  first %li bytes:", size + 1);
 	else
-		printf("  premiers 10 octets:");
-	for (indice = 0; indice <= taille && indice < 10; indice++)
-		printf(" %02hhx", chaine_essai[indice]);
+		printf("  first 10 bytes:");
+	for (i = 0; i <= size && i < 10; i++)
+		printf(" %02hhx", trying_str[i]);
 	printf("\n");
 }
 
 void print_python_list(PyObject *p)
 {
-        long int taille = PyList_Size(p);
-        int indice;
-        PyListObject *liste = (PyListObject *)p;
+        long int size = PyList_Size(p);
+        int i;
+        PyListObject *list = (PyListObject *)p;
         const char *type;
 
         printf("[*] Python list info\n");
-        printf("[*] Taille de la liste Python = %li\n", taille);
-        printf("[*] Alloué = %li\n", liste->allocated);
-        for (indice = 0; indice < taille; indice++)
+        printf("[*] Size of the Python List = %li\n", size);
+        printf("[*] Allocated = %li\n", list->allocated);
+        for (i = 0; i < size; i++)
         {
-                type = (liste->ob_item[indice])->ob_type->tp_name;
-		printf("Element %i: %s\n", indice, type);
+                type = (list->ob_item[i])->ob_type->tp_name;
+		printf("Element %i: %s\n", i, type);
                 if (!strcmp(type, "bytes"))
-                        print_python_bytes(liste->ob_item[indice]);
+                        print_python_bytes(list->ob_item[i]);
         }
 }
