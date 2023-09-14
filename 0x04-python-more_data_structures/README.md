@@ -2,3 +2,4 @@ Task 0 : This task is about creating a Python function that computes the square 
 Task 1: This task is about creating a Python function that replaces all occurrences of an element by another in a new list.
 Task 2: This task is about creating a Python function that adds all unique integers in a list (only once for each integer).
 Task 3: This task is about creating a Python function that returns a set of common elements in two sets.
+Task 4: This task is about creating a Python function that returns a set of all elements present in only one set.
