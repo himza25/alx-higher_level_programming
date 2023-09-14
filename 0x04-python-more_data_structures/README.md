@@ -8,3 +8,4 @@ Task 6: This task is about creating a Python function that prints a dictionary b
 Task 7: This task is about creating a Python function that replaces or adds key/value in a dictionary.
 Task 8: This task is about creating a Python function that deletes a key in a dictionary.
 Task 9: This task is about creating a Python function that returns a new dictionary with all values multiplied by 2.
+Task 10: This task is about creating a Python function that returns a key with the biggest integer value.
