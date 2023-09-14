@@ -4,3 +4,4 @@ Task 2: This task is about creating a Python function that adds all unique integ
 Task 3: This task is about creating a Python function that returns a set of common elements in two sets.
 Task 4: This task is about creating a Python function that returns a set of all elements present in only one set.
 Task 5: This task is about creating a Python function that returns the number of keys in a dictionary.
+Task 6: This task is about creating a Python function that prints a dictionary by ordered keys.
