@@ -1,13 +1,37 @@
 #!/usr/bin/python3
+
 def roman_to_int(roman_string):
     if type(roman_string) is not str or roman_string is None:
         return 0
+
     roman_dict = {'I': 1, 'V': 5, 'X': 10, 'L': 50,
                   'C': 100, 'D': 500, 'M': 1000}
-    num = 0
-    for i in range(len(roman_string)):
-        if i > 0 and roman_dict[roman_string[i]] > roman_dict[roman_string[i - 1]]:
-            num += roman_dict[roman_string[i]] - 2 * roman_dict[roman_string[i - 1]]
+
+    total = 0
+    prev_value = 0
+
+    for char in roman_string:
+        value = roman_dict[char]
+        if value > prev_value:
+            total += value - 2 * prev_value
         else:
-            num += roman_dict[roman_string[i]]
-    return num
+            total += value
+        prev_value = value
+
+    return total
+
+if __name__ == "__main__":
+    roman_number = "X"
+    print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+    roman_number = "VII"
+    print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+    roman_number = "IX"
+    print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+    roman_number = "LXXXVII"
+    print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+    roman_number = "DCCVII"
+    print("{} = {}".format(roman_number, roman_to_int(roman_number)))
