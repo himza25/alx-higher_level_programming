@@ -11,3 +11,4 @@ Task 9: This task is about creating a Python function that returns a new diction
 Task 10: This task is about creating a Python function that returns a key with the biggest integer value.
 Task 11: This task is about creating a Python function that returns a list with all values multiplied by a number without using any loops.
 Task 12: This task is about creating a Python function that converts a Roman numeral to an integer.
+Task 13: This task is about creating a Python function that returns the weighted average of all integers tuple (<score>, <weight>).
