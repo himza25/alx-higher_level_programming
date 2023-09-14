@@ -13,3 +13,4 @@ Task 11: This task is about creating a Python function that returns a list with 
 Task 12: This task is about creating a Python function that converts a Roman numeral to an integer.
 Task 13: This task is about creating a Python function that returns the weighted average of all integers tuple (<score>, <weight>).
 Task 14: This task is about creating a Python function that computes the square value of all integers of a matrix using map.
+Task 15: This task is about creating a Python function that deletes keys with a specific value in a dictionary.
