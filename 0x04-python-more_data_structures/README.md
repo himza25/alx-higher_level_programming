@@ -7,3 +7,4 @@ Task 5: This task is about creating a Python function that returns the number of
 Task 6: This task is about creating a Python function that prints a dictionary by ordered keys.
 Task 7: This task is about creating a Python function that replaces or adds key/value in a dictionary.
 Task 8: This task is about creating a Python function that deletes a key in a dictionary.
+Task 9: This task is about creating a Python function that returns a new dictionary with all values multiplied by 2.
