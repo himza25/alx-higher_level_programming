@@ -5,3 +5,4 @@
 4-list_division: A Python function that divides elements of two lists element by element.
 5-raise_exception.py: A script that defines a function that raises a TypeError exception
 6-raise_exception_msg.py: A script that defines a function that raises a NameError exception with a given message
+100-safe_print_integer_err.py: A script that safely prints an integer and returns True if the value is an integer. Otherwise, returns False and prints an error message to stderr
