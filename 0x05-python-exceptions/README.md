@@ -4,3 +4,4 @@
 2.This task is about safely dividing two integers and printing the result.
 4-list_division: A Python function that divides elements of two lists element by element.
 5-raise_exception.py: A script that defines a function that raises a TypeError exception
+6-raise_exception_msg.py: A script that defines a function that raises a NameError exception with a given message
