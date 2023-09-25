@@ -1,10 +1,1 @@
-0. Safe list printing: A Python script that defines a function safe_print_list which prints x elements of a list safely.
-1. Safe printing of an integers list: A Python script that defines a function safe_print_integer which safely prints an integer.
-2. Print and count integers: A Python script that defines a function safe_print_list_integers which prints the first x integers in a list.
-2.This task is about safely dividing two integers and printing the result.
-4-list_division: A Python function that divides elements of two lists element by element.
-5-raise_exception.py: A script that defines a function that raises a TypeError exception
-6-raise_exception_msg.py: A script that defines a function that raises a NameError exception with a given message
-100-safe_print_integer_err.py: A script that safely prints an integer and returns True if the value is an integer. Otherwise, returns False and prints an error message to stderr
-101-safe_function.py: A script that defines a function which executes another function safely, handling exceptions gracefully.
-102. This project includes an advanced Python function that replicates specific bytecode behavior.
+103. This task involves creating a shared C library to interact with Python objects like lists, bytes, and floats.
