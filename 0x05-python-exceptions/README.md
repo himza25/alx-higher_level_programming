@@ -6,3 +6,4 @@
 5-raise_exception.py: A script that defines a function that raises a TypeError exception
 6-raise_exception_msg.py: A script that defines a function that raises a NameError exception with a given message
 100-safe_print_integer_err.py: A script that safely prints an integer and returns True if the value is an integer. Otherwise, returns False and prints an error message to stderr
+101-safe_function.py: A script that defines a function which executes another function safely, handling exceptions gracefully.
