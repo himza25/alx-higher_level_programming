@@ -10,14 +10,14 @@ def safe_print_list_integers(my_list=[], x=0):
     Returns:
         The actual number of integers printed
     """
-    num_printed = 0  # Counter for actual number of integers printed
+    num_printed = 0 
     for i in range(x):
         try:
             print("{:d}".format(my_list[i]), end="")
-            num_printed += 1  # Increment if successfully printed an integer
+            num_printed += 1
         except IndexError:
-            raise  # Raising exception if index out of range
+            raise
         except (ValueError, TypeError):
-            pass  # Continue if element is not an integer
+            pass
     print("")
     return num_printed
