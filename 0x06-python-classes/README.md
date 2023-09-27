@@ -3,3 +3,4 @@
 2. Size validation: The Square class now validates the size attribute to ensure it's an integer and >= 0.
 3. Area of a square: Added a method to the Square class that calculates and returns the area of the square.
 4. Access and update private attribute: Added a getter and setter method for the size attribute of the Square class.
+5. Printing a square: Added a my_print method to the Square class for printing the square.
