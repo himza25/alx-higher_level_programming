@@ -8,3 +8,4 @@
 7. Singly Linked List: Created a Node class and a SinglyLinkedList class to manage a singly linked list with sorted insert.
 8. This task involves implementing a Square class in Python with attributes for size and position. The class includes methods for calculating the area and for printing the square using the '#' character.
 9. This task implements a Square class that allows comparison of two Square instances based on their areas.
+10. This task implements a MagicClass that mimics the given Python bytecode. It can calculate the area and circumference of a circle based on its radius.
