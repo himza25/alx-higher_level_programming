@@ -1,15 +1,21 @@
 #!/usr/bin/python3
+"""
+A module containing a class definition
+for a singly linked list and its nodes.
+"""
+
 
 class Node:
-    """Defines a node of a singly linked list."""
+    """A class that defines a node in a singly linked list."""
+
     def __init__(self, data, next_node=None):
-        """Initializes the node with a given data value and a next_node."""
+        """Initialize a Node object with data and next_node."""
         self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
-        """Retrieve the data of the node."""
+        """Retrieve the data from the node."""
         return self.__data
 
     @data.setter
@@ -21,47 +27,64 @@ class Node:
 
     @property
     def next_node(self):
-        """Retrieve the next node."""
+        """Retrieve the next_node."""
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
-        """Set the next node."""
+        """Set the next_node."""
         if value is not None and not isinstance(value, Node):
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
 
 class SinglyLinkedList:
-    """Defines a singly linked list."""
+    """A class that defines a singly linked list."""
+
     def __init__(self):
-        """Initializes the linked list with a head set to None."""
+        """Initialize an empty singly linked list."""
         self.__head = None
 
-    def __str__(self):
-        """String representation of the linked list."""
-        current = self.__head
-        node_values = []
-        while current:
-            node_values.append(str(current.data))
-            current = current.next_node
-        return "\n".join(node_values)
-
     def sorted_insert(self, value):
-        """Insert a new Node into the correct sorted position."""
-        new_node = Node(value)
+        """Insert a new Node into the correct sorted position in the list."""
+        new = Node(value)
         if self.__head is None:
-            self.__head = new_node
+            self.__head = new
             return
 
         if self.__head.data > value:
-            new_node.next_node = self.__head
-            self.__head = new_node
+            new.next_node = self.__head
+            self.__head = new
             return
 
         current = self.__head
-        while current.next_node and current.next_node.data < value:
+        while current.next_node is not None and current.next_node.data < value:
             current = current.next_node
 
-        new_node.next_node = current.next_node
-        current.next_node = new_node
+        new.next_node = current.next_node
+        current.next_node = new
+
+    def __str__(self):
+        """Return a string representation of the linked list."""
+        values = []
+        current = self.__head
+        while current is not None:
+            values.append(str(current.data))
+            current = current.next_node
+        return '\n'.join(values)
+
+
+if __name__ == "__main__":
+    sll = SinglyLinkedList()
+    sll.sorted_insert(2)
+    sll.sorted_insert(5)
+    sll.sorted_insert(3)
+    sll.sorted_insert(10)
+    sll.sorted_insert(1)
+    sll.sorted_insert(-4)
+    sll.sorted_insert(-3)
+    sll.sorted_insert(4)
+    sll.sorted_insert(5)
+    sll.sorted_insert(12)
+    sll.sorted_insert(3)
+    print(sll)
