@@ -1,21 +1,22 @@
 #!/usr/bin/python3
-import math
+"""This module defines the MagicClass class to compute the area and
+circumference of a circle.
+"""
 
-"""
-This module defines the MagicClass.
-It provides a way to calculate the area and circumference of a circle.
-"""
+import math
 
 
 class MagicClass:
-    """
-    This class represents a circle.
-    It allows setting and getting the radius of the circle,
-    calculating the area, and calculating the circumference.
+    """This class provides methods to compute the area and
+    circumference of a circle given its radius.
     """
 
     def __init__(self, radius=0):
-        """Initialize a new MagicClass with radius."""
+        """Initialize the MagicClass instance.
+
+        Args:
+            radius (int, float): The radius of the circle.
+        """
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
             raise TypeError("radius must be a number")
