@@ -5,3 +5,4 @@
 4. Access and update private attribute: Added a getter and setter method for the size attribute of the Square class.
 5. Printing a square: Added a my_print method to the Square class for printing the square.
 6. Coordinates of a square: Added a position attribute and modified the my_print method to account for position.
+7. Singly Linked List: Created a Node class and a SinglyLinkedList class to manage a singly linked list with sorted insert.
