@@ -4,6 +4,7 @@ This module defines a Square class that calculates the area of a square.
 It inherits from the square class with size validations.
 """
 
+
 class Square:
     """
     This class represents a square.
