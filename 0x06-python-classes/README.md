@@ -2,3 +2,4 @@
 1. Square with size: This task introduces a Square class with a private instance attribute 'size'.
 2. Size validation: The Square class now validates the size attribute to ensure it's an integer and >= 0.
 3. Area of a square: Added a method to the Square class that calculates and returns the area of the square.
+4. Access and update private attribute: Added a getter and setter method for the size attribute of the Square class.
