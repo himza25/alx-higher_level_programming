@@ -6,3 +6,4 @@
 5. Printing a square: Added a my_print method to the Square class for printing the square.
 6. Coordinates of a square: Added a position attribute and modified the my_print method to account for position.
 7. Singly Linked List: Created a Node class and a SinglyLinkedList class to manage a singly linked list with sorted insert.
+8. This task involves implementing a Square class in Python with attributes for size and position. The class includes methods for calculating the area and for printing the square using the '#' character.
