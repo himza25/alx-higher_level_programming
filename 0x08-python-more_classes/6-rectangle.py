@@ -65,4 +65,6 @@ class Rectangle:
 
     def __del__(self):
         """Print a message when an instance is deleted"""
-        print("
+        print("Bye rectangle...")
+        # Decrement the number of instances during each instance deletion
+        Rectangle.number_of_instances -= 1
