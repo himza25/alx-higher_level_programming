@@ -1,1 +1,1 @@
-This task is about creating a shell script to run a Python script.
+0. Simple rectangle: This task involves creating an empty class Rectangle that defines a rectangle.
