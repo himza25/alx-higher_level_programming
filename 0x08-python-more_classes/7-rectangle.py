@@ -5,7 +5,6 @@
 class Rectangle:
     """Defines a rectangle"""
 
-    # Public class attributes to keep track of the number of instances and the print symbol
     number_of_instances = 0
     print_symbol = "#"
 
