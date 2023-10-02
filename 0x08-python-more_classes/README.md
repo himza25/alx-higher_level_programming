@@ -4,3 +4,4 @@
 3. String representation: This task involves extending the Rectangle class to include a __str__ method for string representation.
 4. Eval is magic: This task involves extending the Rectangle class to include a __repr__ method for eval-compatible string representation.
 5. Detect instance deletion: This task involves extending the Rectangle class to include a __del__ method that prints a message when an instance is deleted.
+6. How many instances: This task involves extending the Rectangle class to include a public class attribute number_of_instances that keeps track of the number of instances.
