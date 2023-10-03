@@ -8,3 +8,4 @@
 7. Change representation: This task involves extending the Rectangle class to include a public class attribute print_symbol that can be used for string representation.
 8 . This task involves extending the Rectangle class to include a method for comparing the area of two Rectangle instances.
 9. This task involves extending the Rectangle class to include a class method for creating a square.
+10. This task involves solving the N Queens problem using backtracking.
