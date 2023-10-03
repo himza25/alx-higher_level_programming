@@ -6,3 +6,4 @@
 5. Detect instance deletion: This task involves extending the Rectangle class to include a __del__ method that prints a message when an instance is deleted.
 6. How many instances: This task involves extending the Rectangle class to include a public class attribute number_of_instances that keeps track of the number of instances.
 7. Change representation: This task involves extending the Rectangle class to include a public class attribute print_symbol that can be used for string representation.
+8 . This task involves extending the Rectangle class to include a method for comparing the area of two Rectangle instances.
