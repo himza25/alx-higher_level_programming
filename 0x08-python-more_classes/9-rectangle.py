@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Declare the Rectangle class"""
 
+
 class Rectangle:
     """Public class attributes"""
     print_symbol = "#"
