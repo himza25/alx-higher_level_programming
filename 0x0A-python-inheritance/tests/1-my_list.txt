@@ -1,33 +1,36 @@
-The ``my_list_custom`` module
-============================
+The MyList class
+================
 
-Using ``my_list_custom``
----------------------
+Using MyList
+------------
 
-Import function from module:
-    >>> MyList = __import__('my_list_custom').MyList
+Import the class from the module:
+    >>> MyList = __import__('1-my_list').MyList
 
-Correct Class Type test:
+Check the class type:
     >>> ml = MyList()
     >>> type(ml) == MyList
     True
 
-Correct Instance test:
-    >>> ml = MyList()
+Check if it's an instance of list:
     >>> isinstance(ml, list)
     True
 
-Normal list test:
+Check if print_sorted is an instance method:
+    >>> type(MyList.__dict__['print_sorted'])
+    <class 'function'>
+
+Test with an empty list:
+    >>> ml = MyList()
+    >>> ml.print_sorted()
+    []
+
+Test with a normal list:
     >>> ml = MyList([1, 4, 2, 3, 5])
     >>> ml.print_sorted()
     [1, 2, 3, 4, 5]
 
-Negative ints list test:
+Test with negative integers:
     >>> ml = MyList([-1, 4, 100, -33, 0])
     >>> ml.print_sorted()
     [-33, -1, 0, 4, 100]
-
-Empty list test:
-    >>> ml = MyList()
-    >>> ml.print_sorted()
-    []
