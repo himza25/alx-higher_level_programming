@@ -1,31 +1,69 @@
-The BaseGeometry Module
-=======================
+The ``7-base_geometry`` Python Module
+=====================================
 
-Utilizing BaseGeometry
-----------------------
+Working with ``BaseGeometry``
+-----------------------------
 
 Import the class from the module:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Verify the class type:
+Check if the class type is correct:
     >>> bg_instance = BaseGeometry()
-    >>> type(bg_instance) == BaseGeometry
+    >>> isinstance(bg_instance, BaseGeometry)
     True
 
-Test integer_validator with valid integer:
-    >>> bg_instance.integer_validator("my_int", 12)
-    
-Test integer_validator with string:
-    >>> bg_instance.integer_validator("name", "John")
+
+Testing area() Method
+---------------------
+Check if area is an instance method:
+    >>> callable(BaseGeometry.area)
+    True
+
+Attempt to call area without any arguments:
+    >>> bg_instance.__class__.area()
     Traceback (most recent call last):
-    TypeError: name must be an integer
-    
-Test integer_validator with zero:
-    >>> bg_instance.integer_validator("age", 0)
+    TypeError: area() missing 1 required positional argument: 'self'
+
+Try calling area with an extra argument:
+    >>> bg_instance.area(5)
     Traceback (most recent call last):
-    ValueError: age must be greater than 0
-    
-Test integer_validator with negative integer:
-    >>> bg_instance.integer_validator("distance", -4)
+    TypeError: area() takes 1 positional argument but 2 were given
+
+Call area normally:
+    >>> bg_instance.area()
     Traceback (most recent call last):
-    ValueError: distance must be greater than 0
+    Exception: area() is not implemented
+
+
+Testing integer_validator() Method
+----------------------------------
+Check if integer_validator is an instance method:
+    >>> callable(BaseGeometry.integer_validator)
+    True
+
+Attempt to call integer_validator without any arguments:
+    >>> bg_instance.__class__.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+
+Try calling integer_validator with incorrect number of arguments:
+    >>> bg_instance.integer_validator("x", 1, 2)
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+Test integer_validator with various invalid values:
+    >>> bg_instance.integer_validator("var", "string")
+    Traceback (most recent call last):
+    TypeError: var must be an integer
+
+    >>> bg_instance.integer_validator("var", 0)
+    Traceback (most recent call last):
+    ValueError: var must be greater than 0
+
+    >>> bg_instance.integer_validator("var", -1)
+    Traceback (most recent call last):
+    ValueError: var must be greater than 0
+
+Test integer_validator with valid values:
+    >>> bg_instance.integer_validator("var", 10)
+    >>> bg_instance.integer_validator("var", 1)
