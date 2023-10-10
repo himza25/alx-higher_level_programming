@@ -1,5 +1,5 @@
-The ``7-base_geometry`` Python Module
-=====================================
+The ``BaseGeometry`` Python Module
+==================================
 
 Exploring ``BaseGeometry``
 --------------------------
@@ -7,7 +7,7 @@ Exploring ``BaseGeometry``
 Import the class from the module:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-Verify the class type:
+Class Type Verification:
     >>> bg_instance = BaseGeometry()
     >>> type(bg_instance) == BaseGeometry
     True
