@@ -1,0 +1,31 @@
+The BaseGeometry Module
+=======================
+
+Utilizing BaseGeometry
+----------------------
+
+Import the class from the module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Verify the class type:
+    >>> bg_instance = BaseGeometry()
+    >>> type(bg_instance) == BaseGeometry
+    True
+
+Test integer_validator with valid integer:
+    >>> bg_instance.integer_validator("my_int", 12)
+    
+Test integer_validator with string:
+    >>> bg_instance.integer_validator("name", "John")
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+    
+Test integer_validator with zero:
+    >>> bg_instance.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
+    
+Test integer_validator with negative integer:
+    >>> bg_instance.integer_validator("distance", -4)
+    Traceback (most recent call last):
+    ValueError: distance must be greater than 0
