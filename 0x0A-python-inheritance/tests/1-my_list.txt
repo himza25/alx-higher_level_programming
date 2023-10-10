@@ -1,36 +1,74 @@
-The MyList class
-================
+The 1-my_list Module
+=====================
 
-Using MyList
-------------
+Utilizing 1-my_list
+-------------------
 
 Import the class from the module:
     >>> MyList = __import__('1-my_list').MyList
 
-Check the class type:
-    >>> ml = MyList()
-    >>> type(ml) == MyList
+Verify the class type:
+    >>> ml_instance = MyList()
+    >>> type(ml_instance) == MyList
     True
 
-Check if it's an instance of list:
-    >>> isinstance(ml, list)
+Check if it's a list instance:
+    >>> isinstance(ml_instance, list)
     True
 
-Check if print_sorted is an instance method:
+Confirm print_sorted is an instance method:
     >>> type(MyList.__dict__['print_sorted'])
     <class 'function'>
 
+Invoke print_sorted via class without arguments:
+    >>> ml_instance.__class__.print_sorted()
+    Traceback (most recent call last):
+    TypeError: print_sorted() missing 1 required positional argument: 'self'
+
+Invoke print_sorted with one argument:
+    >>> ml_instance.print_sorted([4, 2, 5])
+    Traceback (most recent call last):
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+Invoke print_sorted with two arguments:
+    >>> ml_instance.print_sorted([4, 2, 5], 1)
+    Traceback (most recent call last):
+    TypeError: print_sorted() takes 1 positional argument but 3 were given
+
 Test with an empty list:
-    >>> ml = MyList()
-    >>> ml.print_sorted()
+    >>> ml_instance = MyList()
+    >>> ml_instance.print_sorted()
     []
 
-Test with a normal list:
-    >>> ml = MyList([1, 4, 2, 3, 5])
-    >>> ml.print_sorted()
+Test with a populated list:
+    >>> ml_instance = MyList([2, 10, 1])
+    >>> ml_instance.print_sorted()
+    [1, 2, 10]
+
+Another populated list test:
+    >>> ml_instance = MyList([1, 4, 2, 3, 5])
+    >>> ml_instance.print_sorted()
     [1, 2, 3, 4, 5]
 
-Test with negative integers:
-    >>> ml = MyList([-1, 4, 100, -33, 0])
-    >>> ml.print_sorted()
-    [-33, -1, 0, 4, 100]
+List with negative integers:
+    >>> ml_instance = MyList([-1000, -98, -232565, 0, -23423434, -123])
+    >>> ml_instance.print_sorted()
+    [-23423434, -232565, -1000, -123, -98, 0]
+
+Verify original list remains the same:
+    >>> ml_instance = MyList([2, 10, 1, -10, 20, 100, 0])
+    >>> ml_instance.print_sorted()
+    [-10, 0, 1, 2, 10, 20, 100]
+    >>> ml_instance
+    [2, 10, 1, -10, 20, 100, 0]
+
+List already sorted:
+    >>> ml_instance = MyList([-10, 0, 1, 2, 10, 20, 100])
+    >>> ml_instance.print_sorted()
+    [-10, 0, 1, 2, 10, 20, 100]
+
+Test the append method:
+    >>> ml_instance = MyList()
+    >>> ml_instance.append(10)
+    >>> ml_instance
+    [10]
