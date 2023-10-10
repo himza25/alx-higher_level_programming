@@ -1,13 +1,33 @@
->>> MyList = __import__('1-my_list').MyList
->>> my_list = MyList()
->>> my_list.append(1)
->>> my_list.append(4)
->>> my_list.append(2)
->>> my_list.append(3)
->>> my_list.append(5)
->>> print(my_list)
-[1, 4, 2, 3, 5]
->>> my_list.print_sorted()
-[1, 2, 3, 4, 5]
->>> print(my_list)
-[1, 4, 2, 3, 5]
+The ``my_list_custom`` module
+============================
+
+Using ``my_list_custom``
+---------------------
+
+Import function from module:
+    >>> MyList = __import__('my_list_custom').MyList
+
+Correct Class Type test:
+    >>> ml = MyList()
+    >>> type(ml) == MyList
+    True
+
+Correct Instance test:
+    >>> ml = MyList()
+    >>> isinstance(ml, list)
+    True
+
+Normal list test:
+    >>> ml = MyList([1, 4, 2, 3, 5])
+    >>> ml.print_sorted()
+    [1, 2, 3, 4, 5]
+
+Negative ints list test:
+    >>> ml = MyList([-1, 4, 100, -33, 0])
+    >>> ml.print_sorted()
+    [-33, -1, 0, 4, 100]
+
+Empty list test:
+    >>> ml = MyList()
+    >>> ml.print_sorted()
+    []
