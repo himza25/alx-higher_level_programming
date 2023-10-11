@@ -1,52 +1,54 @@
 #!/usr/bin/python3
-"""This module processes log data from stdin and calculates metrics.
+"""Reads from standard input and computes metrics.
 
-It prints out the total file size and the count of status codes
-after every 10 lines or upon receiving a keyboard interruption (CTRL + C).
+This script reads from the standard input line by line and computes metrics.
+After every ten lines or upon a keyboard interruption (CTRL + C),
+it prints the following statistics:
+    - Total file size up to that point.
+    - Count of read status codes up to that point.
 """
 
-import sys
-import signal
 
-
-def display_metrics(total_size, code_count):
-    """Displays the metrics for file size and status codes.
+def print_stats(size, status_codes):
+    """Print accumulated metrics.
 
     Args:
-        total_size (int): Accumulated file size.
-        code_count (dict): Accumulated count of status codes.
+        size (int): The accumulated read file size.
+        status_codes (dict): The accumulated count of status codes.
     """
-    print(f"File size: {total_size}")
-    for code in sorted(code_count.keys()):
-        print(f"{code}: {code_count[code]}")
-
-
-def handle_interrupt(signum, frame):
-    """Handles keyboard interrupt and displays metrics."""
-    display_metrics(total_size, code_count)
-    sys.exit(0)
+    print("File size: {}".format(size))
+    for key in sorted(status_codes.keys()):
+        print("{}: {}".format(key, status_codes[key]))
 
 
 if __name__ == "__main__":
-    total_size = 0
-    code_count = {}
-    line_counter = 0
+    import sys
+
+    size = 0
+    status_codes = {}
     valid_codes = ['200', '301', '400', '401', '403', '404', '405', '500']
+    count = 0
 
-    signal.signal(signal.SIGINT, handle_interrupt)
+    try:
+        for line in sys.stdin:
+            count += 1
 
-    for entry in sys.stdin:
-        line_counter += 1
+            line = line.split()
 
-        elements = entry.strip().split()
-        try:
-            total_size += int(elements[-1])
-        except (IndexError, ValueError):
-            continue
+            try:
+                size += int(line[-1])
+            except (IndexError, ValueError):
+                pass
 
-        status = elements[-2] if len(elements) > 1 else None
-        if status in valid_codes:
-            code_count[status] = code_count.get(status, 0) + 1
+            try:
+                if line[-2] in valid_codes:
+                    status_codes[line[-2]] = status_codes.get(line[-2], 0) + 1
+            except IndexError:
+                pass
 
-        if line_counter % 10 == 0:
-            display_metrics(total_size, code_count)
+            if count % 10 == 0:
+                print_stats(size, status_codes)
+
+    except KeyboardInterrupt:
+        print_stats(size, status_codes)
+        raise
