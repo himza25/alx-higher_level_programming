@@ -2,7 +2,8 @@
 """Log Parsing Script.
 
 This script reads lines from the standard input and calculates metrics.
-It prints the following statistics after every 10 lines or when interrupted by CTRL + C:
+It prints the following statistics after every 10 lines
+or when interrupted by CTRL + C:
     - Cumulative file size.
     - Frequency of each HTTP status code encountered.
 """
@@ -13,7 +14,8 @@ def print_stats(size, status_codes):
 
     Args:
         size (int): The total file size read so far.
-        status_codes (dict): A dictionary containing the count of each status code.
+        status_codes (dict): A dictionary containing the count of each status
+        code.
     """
     print("File size: {}".format(size))
     for key in sorted(status_codes):
