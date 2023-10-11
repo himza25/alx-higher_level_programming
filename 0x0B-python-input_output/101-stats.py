@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""This module is for parsing logs from stdin and computing metrics."""
+
 import sys
 import signal
 
@@ -17,6 +19,7 @@ def signal_handler(sig, frame):
 
 
 if __name__ == "__main__":
+    """Main function that reads stdin line by line and computes metrics."""
     total_size = 0
     line_count = 0
     status_codes = {}
