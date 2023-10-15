@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """This module defines the Base class"""
 
+import json
+import csv
+
 
 class Base:
     """The Base class"""
@@ -27,7 +30,7 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
-    # Task 16
+    # Task 16 and 20
     @classmethod
     def save_to_file(cls, list_objs):
         """Save the JSON string representation of list_objs to a file."""
@@ -36,6 +39,21 @@ class Base:
             list_dicts = [o.to_dictionary() for o in list_objs]
         with open(cls.__name__ + ".json", "w") as f:
             f.write(cls.to_json_string(list_dicts))
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Saves a list of Rectangle or Square objects to a CSV file."""
+        filename = "{}.csv".format(cls.__name__)
+        with open(filename, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            if cls.__name__ == "Rectangle":
+                for obj in list_objs:
+                    writer.writerow(
+                        [obj.id, obj.width, obj.height, obj.x, obj.y]
+                    )
+            elif cls.__name__ == "Square":
+                for obj in list_objs:
+                    writer.writerow([obj.id, obj.size, obj.x, obj.y])
 
     # Task 17
     @staticmethod
@@ -53,7 +71,7 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
-    # Task 19
+    # Task 19 and 20
     @classmethod
     def load_from_file(cls):
         """Return a list of instances."""
@@ -64,6 +82,37 @@ class Base:
         except FileNotFoundError:
             return []
 
+    @classmethod
+    def load_from_file_csv(cls):
+        """Loads a list of Rectangle or Square objects from a CSV file."""
+        filename = "{}.csv".format(cls.__name__)
+        list_objs = []
+        try:
+            with open(filename, mode='r', newline='') as file:
+                reader = csv.reader(file)
+                for row in reader:
+                    if cls.__name__ == "Rectangle":
+                        dictionary = {
+                            "id": int(row[0]),
+                            "width": int(row[1]),
+                            "height": int(row[2]),
+                            "x": int(row[3]),
+                            "y": int(row[4])
+                        }
+                        list_objs.append(cls.create(**dictionary))
+                    elif cls.__name__ == "Square":
+                        dictionary = {
+                            "id": int(row[0]),
+                            "size": int(row[1]),
+                            "x": int(row[2]),
+                            "y": int(row[3])
+                        }
+                        list_objs.append(cls.create(**dictionary))
+            return list_objs
+        except FileNotFoundError:
+            return []
+
+    # Task 21
     @staticmethod
     def draw(list_rectangles, list_squares):
         """ Draws all Rectangles and Squares using Turtle graphics. """
@@ -93,4 +142,4 @@ class Base:
             turtle.forward(square.size + 10)
             turtle.pendown()
 
-        turtle.done()
+            turtle.done()
