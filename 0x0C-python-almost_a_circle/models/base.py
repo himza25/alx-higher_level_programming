@@ -63,3 +63,34 @@ class Base:
             return [cls.create(**d) for d in list_dicts]
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """ Draws all Rectangles and Squares using Turtle graphics. """
+        import turtle
+
+        turtle.speed(1)
+
+        for rect in list_rectangles:
+            for _ in range(2):
+                turtle.forward(rect.width)
+                turtle.right(90)
+                turtle.forward(rect.height)
+                turtle.right(90)
+            turtle.penup()
+            turtle.forward(rect.width + 10)
+            turtle.pendown()
+
+        turtle.penup()
+        turtle.goto(0, -100)
+        turtle.pendown()
+
+        for square in list_squares:
+            for _ in range(4):
+                turtle.forward(square.size)
+                turtle.right(90)
+            turtle.penup()
+            turtle.forward(square.size + 10)
+            turtle.pendown()
+
+        turtle.done()
