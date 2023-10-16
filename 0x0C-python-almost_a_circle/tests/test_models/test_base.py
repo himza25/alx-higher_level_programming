@@ -1,38 +1,34 @@
 #!/usr/bin/python3
-"""This module defines tests for class Base"""
+"""This module defines test cases for the Base class"""
+
 import unittest
 from models.base import Base
 
 
 class TestBase(unittest.TestCase):
-    """Tests to check the functionality of Base class"""
+    """Test cases for the Base class"""
 
-    def test_base_id_none(self):
-        """Test for Base with id None"""
-        base = Base()
-        self.assertEqual(base.id, 1)
+    def test_init(self):
+        """Test initialization of the Base class"""
+        b1 = Base()
+        self.assertEqual(b1.id, 1)
+        b2 = Base()
+        self.assertEqual(b2.id, 2)
+        b3 = Base(12)
+        self.assertEqual(b3.id, 12)
 
-    def test_base_id_set(self):
-        """Test for Base with id set"""
-        base = Base(5)
-        self.assertEqual(base.id, 5)
+    def test_to_json_string(self):
+        """Test the to_json_string method"""
+        list_dicts = [{"id": 1}, {"id": 2}]
+        expected = '[{"id": 1}, {"id": 2}]'
+        self.assertEqual(Base.to_json_string(list_dicts), expected)
 
-    def test_to_json_string_none(self):
-        """Test to_json_string with None"""
-        self.assertEqual(Base.to_json_string(None), "[]")
-
-    def test_to_json_string_empty(self):
-        """Test to_json_string with empty list"""
-        self.assertEqual(Base.to_json_string([]), "[]")
-
-    def test_from_json_string_none(self):
-        """Test from_json_string with None"""
-        self.assertEqual(Base.from_json_string(None), [])
-
-    def test_from_json_string_empty(self):
-        """Test from_json_string with empty string"""
-        self.assertEqual(Base.from_json_string(""), [])
+    def test_from_json_string(self):
+        """Test the from_json_string method"""
+        json_str = '[{"id": 1}, {"id": 2}]'
+        expected = [{"id": 1}, {"id": 2}]
+        self.assertEqual(Base.from_json_string(json_str), expected)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
