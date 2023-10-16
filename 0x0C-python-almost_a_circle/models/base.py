@@ -6,12 +6,14 @@ import csv
 
 
 class Base:
-    """The Base class"""
+    """The Base class serves as the 'base' for all other classes in this
+    project.
+    """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialize a new Base.
+        """Initialize a new Base instance.
 
         Args:
             id (int): The identity of the new Base.
@@ -21,6 +23,10 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Base object"""
+        return {'id': self.id}
 
     # Task 15
     @staticmethod
@@ -67,7 +73,13 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Return an instance with all attributes already set."""
-        dummy = cls(1, 1)  # Replace with your own "dummy" attributes
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        else:
+            dummy = cls()
+
         dummy.update(**dictionary)
         return dummy
 
