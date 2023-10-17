@@ -6,14 +6,12 @@ import csv
 
 
 class Base:
-    """The Base class serves as the 'base' for all other classes in this
-    project.
-    """
+    """The Base class"""
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialize a new Base instance.
+        """Initialize a new Base.
 
         Args:
             id (int): The identity of the new Base.
