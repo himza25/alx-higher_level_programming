@@ -1,21 +1,68 @@
-Python Test-Driven Development Tasks
-This repository contains various Python tasks focusing on Test-Driven Development (TDD).
+# Python Test-Driven Development
 
-Tasks
-Task 0: Integers Addition
-Implements a function to add two integers or floats.
-Includes doctest.
-Task 1: Divide a Matrix
-Implements a function to divide all elements of a matrix by a number.
-Includes doctest.
-Task 2: Say My Name
-Implements a function to print a full name.
-Includes doctest.
-Task 3: Print Square
-Implements a function to print a square using the "#" character.
-Includes doctest.
-Task 4: Text Indentation
-Implements a function to indent text at specific characters.
-Includes doctest.
-Task 5: Max Integer - Unittest
-Implements unittests for a function that finds the maximum integer in a list.
+This repository is dedicated to practicing test-driven development in Python. Below are the task descriptions and requirements.
+
+## Tasks
+
+### 0. Integers addition
+
+- Prototype: `def add_integer(a, b=98):`
+- Requirements:
+  - `a` and `b` must be integers or floats, otherwise raise a `TypeError` exception with the message `a must be an integer` or `b must be an integer`.
+  - `a` and `b` must be first casted to integers if they are float.
+  - Returns an integer: the addition of `a` and `b`.
+  - You are not allowed to import any module.
+
+### 1. Divide a matrix
+
+- Prototype: `def matrix_divided(matrix, div):`
+- Requirements:
+  - `matrix` must be a list of lists of integers or floats.
+  - Each row of the matrix must be of the same size.
+  - `div` must be a number (integer or float).
+  - All elements of the matrix should be divided by `div`, rounded to 2 decimal places.
+  - Returns a new matrix.
+  - You are not allowed to import any module.
+
+### 2. Say my name
+
+- Prototype: `def say_my_name(first_name, last_name=""):`
+- Requirements:
+  - `first_name` and `last_name` must be strings.
+  - You are not allowed to import any module.
+
+### 3. Print square
+
+- Prototype: `def print_square(size):`
+- Requirements:
+  - `size` is the size length of the square.
+  - `size` must be an integer.
+  - if `size` is a float and is less than 0, raise a TypeError exception with the message `size must be an integer`.
+  - You are not allowed to import any module.
+
+### 4. Text indentation
+
+- Prototype: `def text_indentation(text):`
+- Requirements:
+  - `text` must be a string.
+  - There should be no space at the beginning or at the end of each printed line.
+  - You are not allowed to import any module.
+
+### 5. Max integer - Unittest
+
+- Prototype: `def max_integer(list=[]):`
+- Requirements:
+  - Your test file should be inside a folder `tests`.
+  - You have to use the `unittest` module.
+
+### 6. Matrix multiplication (Advanced)
+
+- Prototype: `def matrix_mul(m_a, m_b):`
+- Requirements:
+  - `m_a` and `m_b` must be validated with specific requirements.
+  - `m_a` and `m_b` must be an list of lists of integers or floats.
+
+## Repo:
+
+GitHub repository: `alx-higher_level_programming`
+Directory: `0x07-python-test_driven_development`
