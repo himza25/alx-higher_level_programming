@@ -19,4 +19,4 @@ if __name__ == "__main__":
 
     for one in all_rows:
         if one[1][0] == 'N':
-            print(on)
+            print(one)
