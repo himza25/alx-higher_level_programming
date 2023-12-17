@@ -1,28 +1,36 @@
 #!/usr/bin/python3
-"""Filter states by user input."""
+"""
+A script that takes in an argument and displays all values in the states table
+of hbtn_0e_0_usa where name matches the argument.
+"""
+
+import MySQLdb
+import sys
 
 if __name__ == "__main__":
-    import MySQLdb
-    from sys import argv
+    # Unpack command-line arguments
+    username, password, database, state_name = sys.argv[1:]
 
     # Connect to the database
-    db = MySQLdb.connect(
-        host="localhost",
-        user=argv[1],
-        passwd=argv[2],
-        db=argv[3]
-    )
+    db = MySQLdb.connect(host="localhost", port=3306, user=username,
+                         passwd=password, db=database)
+
+    # Create a cursor object
     cur = db.cursor()
 
-    # Execute the query to select states with the name provided by the user
+    # Create the SQL query string
     query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
-    cur.execute(query, (argv[4],))
-    all_rows = cur.fetchall()
 
-    # Print each state that matches the user input
-    for one in all_rows:
-        print(one)
+    # Execute the query
+    cur.execute(query, (state_name,))
 
-    # Close the cursor and the connection
+    # Fetch all the rows
+    rows = cur.fetchall()
+
+    # Print the rows
+    for row in rows:
+        print(row)
+
+    # Close cursor and connection
     cur.close()
     db.close()
