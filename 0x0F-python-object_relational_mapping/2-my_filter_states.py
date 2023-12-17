@@ -7,6 +7,7 @@ of hbtn_0e_0_usa where name matches the argument.
 import MySQLdb
 import sys
 
+
 def main():
     # Connect to the database
     db = MySQLdb.connect(host="localhost",
@@ -18,7 +19,8 @@ def main():
 
     # Create and execute the query
     # Use format() for creating the SQL query with the user input
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(sys.argv[4])
+    query = ("SELECT * FROM states WHERE name = '{}' "
+             "ORDER BY id ASC").format(sys.argv[4])
     cur.execute(query)
 
     # Fetch and display the results
@@ -28,6 +30,7 @@ def main():
     # Close all cursors and databases
     cur.close()
     db.close()
+
 
 if __name__ == "__main__":
     main()
