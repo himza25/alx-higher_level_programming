@@ -30,9 +30,9 @@ The project includes scripts that perform a range of operations, from reading an
 2. Navigate to the `0x14-javascript-web_scraping` directory.
 3. Install Node.js and npm if not already installed.
 4. Run the scripts using Node.js. For example:
-	node 3-starwars_title.js 1
+  `node 3-starwars_title.js 1`
 5. Ensure that any external modules (like `request`) are installed using npm:
-	npm install request
+  `npm install request`
 
 ## Acknowledgments
 
